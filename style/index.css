@@ -272,6 +272,7 @@ body {
   height: 100%;
   width: 46%;
   background-color: #B7B7B7;
+  opacity: 0.8;
   top: 0;
   left: -50%;
   /*margin-left: 0;*/
@@ -348,5 +349,6 @@ body {
   margin-top: 13.5vh;
   margin-bottom: 13.5vh;
   /*clip-path: polygon(0 0, 0 5.5vh, 10vw 5.5vh, 10vw 0);*/
+  -webkit-clip-path: url(#barClip);
   clip-path: url(#barClip);
 }
