@@ -29,10 +29,10 @@
 	    </script>
 	</head>
 	<body>
-		<div class="intro">
+<!-- 		<div class="intro">
 			<div class="glitch glitchFadeout" data-text="Hello">Hello</div> 
 			<div class="glitch glitchFadeout" data-text="I'm Jiayi">I'm Jiayi</div>
-		</div>
+		</div> -->
 		<div id="background">
 		<script type="text/javascript">
 			var bg = document.getElementById("background");
@@ -63,6 +63,8 @@
 			<div id="aboutBg"></div>
 			<div id="contactBg"></div> -->
 		</div>
+		<div id="chineseNameShadow">赵嘉仪</div>
+		<div id="chineseName">赵嘉仪</div>
 		<div id="shade"></div>
 		<script type="text/javascript">
 			var shade = document.getElementById("shade");
@@ -175,7 +177,7 @@
 			</script> -->
 		</div>
 		<div class="buttonBarsOverlays">
-			<div class="barsOverlays" id="bar1Overlay">
+			<a href="about.html" onmouseover="changeBackground(0)" onmouseleave="changedBackground()"><div class="barsOverlays" id="bar1Overlay">
 				<div class="barLetters">
 					<span>A</span>
 					<span>B</span>
@@ -183,16 +185,16 @@
 					<span>U</span>
 					<span>T</span>
 				</div>
-			</div>
-			<div class="barsOverlays" id="bar2Overlay">
+			</div></a>
+			<a href="work.html" onmouseover="changeBackground(1)" onmouseleave="changedBackground()"><div class="barsOverlays" id="bar2Overlay">
 				<div class="barLetters">
 					<span>W</span>
 					<span>O</span>
 					<span>R</span>
 					<span>K</span>
 				</div>
-			</div>
-			<div class="barsOverlays" id="bar3Overlay">
+			</div></a>
+			<a href="contact.html" onmouseover="changeBackground(2)" onmouseleave="changedBackground()"><div class="barsOverlays" id="bar3Overlay">
 				<div class="barLetters">
 					<span>C</span>
 					<span>O</span>
@@ -202,7 +204,7 @@
 					<span>C</span>
 					<span>T</span>
 				</div>
-			</div>
+			</div></a>
 		</div>
 
 <!-- 		<div class="nameTitle">
