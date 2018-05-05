@@ -1,12 +1,56 @@
 # Routes Accesses and Users Abilities
+
 The following table describes the routes the users of each type can access and the abilities they have
-| Request | Controller#Action | Guest | Parent | Instructor | Admin |
-| --- | --- | --- | --- | --- | --- |
-| GET /users | users#index | no	| no |	no | yes |
-| GET /users/:id |	users#show |	no	| yes, itself	| yes, itself	| yes |
-| POST /users	| users#create	| no	| no	| no	| yes |
-| PUT /users/:id	| users#update	| no	| yes, itself, only phone, email, password	| yes, itself, only phone, email, password	| yes |
-| DELETE /users/:id	| users#destroy	| no	| no	| no	| yes |
+
+Request                    | Guest | Parent | Instructor | Admin 
+---------------------------| -- | -- | -- | -- 
+`GET /users`               | no | no | no | yes 
+`GET /users/:id`           | no | yes, itself | yes, itself | yes 
+`POST /users`	         | no | no | no | yes 
+`PUT /users/:id`	         | no | yes, itself | yes, itself | yes 
+`DELETE /users/:id`        | no | no | no	| yes 
+ | | | | | 
+`GET /camps`	         | yes<br>only upcoming camps | yes<br>only active camps | yes<br>only active camps | yes
+`GET /camps/:id`	         | yes<br>only upcoming camps | yes<br>only active camps | yes<br>only active camps | yes
+`POST /camps`	         | no | no | no | yes
+`PUT /camps/:id`	         | no | no | no | yes
+`DELETE /camps/:id`	| no | no | no | yes
+ | | | | | 
+`GET /curriculums`         | yes<br>only active curriculums | yes<br>only active curriculums | yes<br>only active curriculums | yes
+`GET /curriculums/:id`	| yes<br>only active curriculums | yes<br>only active curriculums | yes<br>only active curriculums | yes
+`POST /curriculums`	| no | no | no | yes
+`PUT /curriculums/:id`	| no | no | no | yes
+`DELETE /curriculums/:id`	| no | no | no | yes
+ | | | | | 
+`GET /locations`           | yes<br>only active locations | yes<br>only active locations | yes<br>only active locations | yes
+`GET /locations/:id`       | yes<br>only active locations | yes<br>only active locations | yes<br>only active locations | yes
+`POST /locations`          | no | no | no | yes
+`PUT /locations/:id`       | no | no | no | yes
+`DELETE /locations/:id`    | no | no | no | yes
+ | | | | | 
+`GET /instructors`         | yes<br>only active instructors | yes<br>only active instructors | yes<br>only active instructors | yes
+`GET /instructors/:id`     | yes<br>only active instructors | yes<br>only active instructors | yes<br>only active instructors | yes
+`POST /instructors`        | no | no | no | yes
+`PUT /instructors/:id`     | no | no | yes, itself | yes
+`DELETE /instructors/:id`  | no | no | no | yes
+ | | | | | 
+`GET /registrations`       | no | yes<br>only those belong to itself | no | yes
+`GET /registrations/:id`   | no | yes<br>only those belong to itself | no | yes
+`POST /registrations`      | no | yes | no | yes
+`PUT /registrations/:id`   | no | yes<br>when payment is not made | no | yes
+`DELETE /registrations/:id`| no | yes<br>when payment is not made | no | yes
+ | | | | | 
+`GET /students`            | no | yes | yes<br>only those who are its students | yes
+`GET /students/:id`        | no | yes<br>only those belong to itself | yes<br>only those who are its students | yes
+`POST /students`           | no | yes<br>only those belong to itself | no | yes
+`PUT /students/:id`        | no | yes<br>only those belong to itself | no | yes
+`DELETE /students/:id`     | no | no | no | yes
+ | | | | | 
+`GET /families`            | no | no | yes<br>only those who are its students | yes
+`GET /families/:id`        | no | yes, itself | yes<br>only those who are its students | yes
+`POST /families`           | no | no | no | yes
+`PUT /families/:id`        | no | no | no | yes
+`DELETE /families/:id`     | no | no | no | yes
 
 # Detailed Functionality and Testing
 
