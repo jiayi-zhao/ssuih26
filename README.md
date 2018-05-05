@@ -40,7 +40,7 @@ Request                    | Guest | Parent | Instructor | Admin
 `PUT /registrations/:id`   | no | yes<br>when payment is not made | no | yes
 `DELETE /registrations/:id` | no | yes<br>when payment is not made | no | yes
  | | | | | 
-`GET /students`            | no | yes | yes<br>only those who are its students | yes
+`GET /students`            | no | yes<br>only those belong to itself | yes<br>only those who are its students | yes
 `GET /students/:id`        | no | yes<br>only those belong to itself | yes<br>only those who are its students | yes
 `POST /students`           | no | yes<br>only those belong to itself | no | yes
 `PUT /students/:id`        | no | yes<br>only those belong to itself | no | yes
