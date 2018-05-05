@@ -49,7 +49,7 @@ Request                    | Guest | Parent | Instructor | Admin
 `GET /families`            | no | no | yes<br>only those who are its students | yes
 `GET /families/:id`        | no | yes, itself | yes<br>only those who are its students | yes
 `POST /families`           | no | no | no | yes
-`PUT /families/:id`        | no | no | no | yes
+`PUT /families/:id`        | no | yes, itself | no | yes
 `DELETE /families/:id`     | no | no | no | yes
 
 # Detailed Functionality and Testing
@@ -434,3 +434,78 @@ instructor 3 is inactive
              "paid":true}
 ```
 only 27 and 38 work for parent1
+
+### GET /students & GET /students/:id
+
+```
+{
+"id":27,
+"proper_name":"Angeline Ward",
+"family_id":1,
+"date_of_birth":"2007-05-01",
+"rating":326,
+"active":true,
+"past_camps":[],
+"upcoming_camps":[
+                 {
+                 "id":8,
+                 "curriculum":{
+                              "id":1,
+                              "name":"Principles of Chess",
+                              "description":"This camp is designed for beginning students 
+                                             who know need to learn opening principles, 
+                                             pattern recognition and basic tactics and mates.
+                                             Students will be given a set of mate-in-one 
+                                             flashcards and are expected to work on these at 
+                                             home during the week.",
+                              "min_rating":0,
+                              "max_rating":500,
+                              "active":true
+                              },
+                  "location":{
+                             "id":1,
+                             "name":"North Side",
+                             "street_1":"801 Union Place",
+                             "street_2":null,
+                             "city":"Pittsburgh",
+                             "state":"PA",
+                             "zip":"15212",
+                             "max_capacity":16,
+                             "active":true
+                             },
+                   "instructors":[
+                                 {
+                                 "id":8,
+                                 "name":"Reyes-Franco, Sarah",
+                                 "bio":"Great TA for 67-272; hopefully can teach chess too.",
+                                 "email":"sarah@razingrooks.org",
+                                 "phone":"4122683259","active":true
+                                 }],
+                    "cost":150.0,
+                    "start_date":"2018-06-18",
+                    "end_date":"2018-06-22",
+                    "time_slot":"pm",
+                    "max_students":8,
+                    "is_open":false,
+                    "open_spots":0,
+                    "active":true}]
+}
+```
+
+only access 27 and 38
+
+### GET /families & GET /families/:id
+
+```
+{
+"id":1,
+"family_name":"Ward",
+"parent_first_name":"Rosella",
+"email":"ward643@example.com",
+"phone":"9784675905",
+"active":true,
+"students":[
+           {same format as previous GET /student}
+           ]
+}
+```
