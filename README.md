@@ -351,3 +351,86 @@ no inactive locations
 instructor 3 is inactive
 
 ### GET /registrations & GET /registrations/:id
+
+```
+{
+"id":27,
+"camp":{
+       "id":8,
+       "curriculum":{
+                    "id":1,
+                    "name":"Principles of Chess",
+                    "description":"This camp is designed for beginning students who 
+                                   know need to learn opening principles, pattern 
+                                   recognition and basic tactics and mates.  
+                                   Students will be given a set of mate-in-one 
+                                   flashcards and are expected to work on these at 
+                                   home during the week.",
+                    "min_rating":0,
+                    "max_rating":500,
+                    "active":true
+                    },
+        "location":{
+                   "id":1,
+                   "name":"North Side",
+                   "street_1":"801 Union Place",
+                   "street_2":null,
+                   "city":"Pittsburgh",
+                   "state":"PA",
+                   "zip":"15212",
+                   "max_capacity":16,
+                   "active":true
+                   },
+         "instructors":[
+                       {
+                       "id":8,
+                       "name":"Reyes-Franco, Sarah",
+                       "bio":"Great TA for 67-272; hopefully can teach chess too.",
+                       "email":"sarah@razingrooks.org",
+                       "phone":"4122683259",
+                       "active":true
+                       },{
+                       "id":5,
+                       "name":"Stapinski, Jordan",
+                       "bio":"Great TA for 67-272; hopefully can teach chess too.",
+                       "email":"jordan@razingrooks.org",
+                       "phone":"4122683259",
+                       "active":true
+                       }],
+           "cost":150.0,
+           "start_date":"2018-06-18",
+           "end_date":"2018-06-22",
+           "time_slot":"pm",
+           "max_students":8,
+           "is_open":false,
+           "open_spots":0,
+           "active":true,
+           "registered_students_list":[
+                                      {"proper_name":"Shakira Koepp"},
+                                      {"proper_name":"Ericka Mayer"},
+                                      {"proper_name":"Jaycee Walter"},
+                                      {"proper_name":"Asia McDermott"},
+                                      {"proper_name":"Angeline Ward"},
+                                      {"proper_name":"Niko Bailey"},
+                                      {"proper_name":"Adell Weissnat"},
+                                      {"proper_name":"Neva Walter"}
+                                      ],
+            "own_registered_students_list":[
+                                           {
+                                           "proper_name":"Angeline Ward",
+                                           "date_of_birth":"2007-05-01",
+                                           "rating":326,
+                                           "active":true,
+                                           "paid":true
+                                           }]},
+            "student":{
+                      "id":27,
+                      "proper_name":"Angeline Ward",
+                      "family_id":1,
+                      "date_of_birth":"2007-05-01",
+                      "rating":326,"active":true
+                      },
+             "payment":"a883c963cbed6699",
+             "paid":true}
+```
+only 27 and 38 work for parent1
