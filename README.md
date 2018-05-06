@@ -4,7 +4,7 @@ The following table describes the routes the users of each type can access and t
 
 Request                    | Guest | Parent | Instructor | Admin 
 ---------------------------| -- | -- | -- | -- 
-`GET /users`               | no | no | no | yes 
+`GET /users`               | no | yes, itself | no | yes 
 `GET /users/:id`           | no | yes, itself | yes, itself | yes 
 `POST /users`	         | no | no | no | yes 
 `PUT /users/:id`	         | no | yes, itself | yes, itself | yes 
