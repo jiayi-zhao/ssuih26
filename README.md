@@ -36,7 +36,7 @@ Request                    | Guest | Parent | Instructor | Admin
  | | | | | 
 `GET /registrations`       | no | yes<br>only those belong to itself | no | yes
 `GET /registrations/:id`   | no | yes<br>only those belong to itself | no | yes
-`POST /registrations`      | no | yes | no | yes
+`POST /registrations`      | no | yes<br>for students belong to itself | no | yes
 `PUT /registrations/:id`   | no | yes<br>when payment is not made | no | yes
 `DELETE /registrations/:id` | no | yes<br>when payment is not made | no | yes
  | | | | | 
