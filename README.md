@@ -20,7 +20,7 @@ Request                    | Guest | Parent | Instructor | Admin
 `GET /curriculums/:id`	| yes<br>only active curriculums | yes<br>only active curriculums | yes<br>only active curriculums | yes
 `POST /curriculums`	| no | no | no | yes
 `PUT /curriculums/:id`	| no | no | no | yes
-`DELETE /curriculums/:id`	| no | no | no | yes
+`DELETE /curriculums/:id`	| no | no | no | no
  | | | | | 
 `GET /locations`           | yes<br>only active locations | yes<br>only active locations | yes<br>only active locations | yes
 `GET /locations/:id`       | yes<br>only active locations | yes<br>only active locations | yes<br>only active locations | yes
@@ -50,7 +50,7 @@ Request                    | Guest | Parent | Instructor | Admin
 `GET /families/:id`        | no | yes, itself | yes<br>only those who are its students | yes
 `POST /families`           | no | no | no | yes
 `PUT /families/:id`        | no | yes, itself | no | yes
-`DELETE /families/:id`     | no | no | no | yes
+`DELETE /families/:id`     | no | no | no | no
 
 # Detailed Functionality and Testing
 
